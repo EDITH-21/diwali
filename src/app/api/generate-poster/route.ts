@@ -1,6 +1,26 @@
 import { NextRequest, NextResponse } from "next/server";
 import { DIWALI_STYLES, PosterStyleId } from "@/types/diwali";
 
+// Highly differentiated prompts tailored to each of the 8 distinct styles
+const STYLE_PROMPTS: Record<PosterStyleId, string> = {
+  "cinematic-gold":
+    "Epic golden-hour Indian palace terrace, grand sandstone pillars, glowing brass urns, floating warm gold embers, majestic royal archway, 85mm cinematic photography, warm gold rim-lighting.",
+  "royal-diwali":
+    "Imperial Rajasthani Jharokha stone window with scalloped arches, deep crimson velvet background, peacock feather motifs, antique hanging brass temple bells, heritage Rajputana regal portrait.",
+  "traditional-indian":
+    "Authentic festive Indian courtyard draped with lush orange and yellow marigold flower garlands (genda phool), dozens of earthen clay mitti ke diye, colorful sacred mandala rangoli, warm natural festival glow.",
+  "luxury-festive":
+    "High-fashion Vogue editorial Diwali portrait, midnight obsidian black and champagne gold dust, sleek faceted geometric diamond framing, dramatic rim studio lighting, haute couture elegance.",
+  "modern-celebration":
+    "Twilight festival night sky with hundreds of floating glowing sky lanterns (kandils), vibrant handheld sparklers creating dynamic golden light trails, joyful celebration bokeh.",
+  "futuristic-diwali":
+    "Cyber-Vedic sci-fi Diwali portrait, glowing neon cyan and gold electric circuitry rangoli, holographic floating lotus diya, futuristic angular framing, cybernetic festive ambiance.",
+  "professional-diwali":
+    "Refined corporate executive Diwali celebration, deep slate navy textured studio backdrop with architectural brushed gold geometric lines, subtle micro-diyas, sophisticated elegance.",
+  "creative-funny-diwali":
+    "Energetic pop-art comic Diwali celebration, dynamic radial action sunburst rays, colorful flying confetti explosion, playful cartoon sparklers, 1000W patakha festive energy.",
+};
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
@@ -40,10 +60,11 @@ export async function POST(req: NextRequest) {
     // If API key is available, call the configured AI provider
     if (hasApiKey && provider !== "demo") {
       try {
-        // Detailed prompt engineered for Indian festive Diwali portraits
-        const festivePrompt = `Ultra-realistic cinematic Indian Diwali festive portrait, 8k resolution, professional studio lighting. Style: ${style.name} (${style.themeNotes}). Golden bokeh glowing diyas, ornate Diwali architecture, celebratory sparks, photorealistic rendering. Person: ${personName.trim()}.`;
+        const specificStylePrompt =
+          STYLE_PROMPTS[styleId as PosterStyleId] || style.samplePrompt;
+        const festivePrompt = `Ultra-realistic portrait of ${personName.trim()} celebrating Diwali. ${specificStylePrompt} 8k resolution, photorealistic, intricate festive details.`;
 
-        // 1. If Hugging Face is configured (e.g., FLUX.1 or SDXL)
+        // 1. Hugging Face Flux / SDXL
         if (hfKey) {
           const hfRes = await fetch(
             "https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-schnell",
@@ -69,12 +90,12 @@ export async function POST(req: NextRequest) {
               provider: "huggingface-flux",
               aiImageUrl: generatedDataUrl,
               styleId,
-              message: "Generated via AI provider with high-fidelity Diwali backdrop",
+              message: `Generated via AI provider with unique ${style.name} composition`,
             });
           }
         }
 
-        // 2. If OpenAI DALL-E is configured
+        // 2. OpenAI DALL-E 3
         if (openaiKey) {
           const oaiRes = await fetch("https://api.openai.com/v1/images/generations", {
             headers: {
@@ -86,7 +107,7 @@ export async function POST(req: NextRequest) {
               prompt: festivePrompt,
               model: "dall-e-3",
               n: 1,
-              size: "1024x1792", // portrait format
+              size: "1024x1792",
               response_format: "b64_json",
             }),
           });
@@ -101,27 +122,25 @@ export async function POST(req: NextRequest) {
                 provider: "openai-dalle3",
                 aiImageUrl: `data:image/png;base64,${b64}`,
                 styleId,
-                message: "Generated via DALL-E 3 portrait engine",
+                message: `Generated via DALL-E 3 with unique ${style.name} composition`,
               });
             }
           }
         }
       } catch (aiErr) {
-        // Fall back gracefully to Studio Demo Compositor on API network/quota failure
-        console.warn("AI Provider call failed or rate-limited, falling back to Demo Compositor:", aiErr);
+        console.warn("AI Provider call failed, falling back to distinct Studio Compositor:", aiErr);
       }
     }
 
     // Working Demo Mode:
-    // If no API key is provided or API is rate-limited, return demo mode status.
-    // The client-side Studio Compositor seamlessly composites the user's authentic photo
-    // into the selected festive Diwali artwork with full typography and effects!
+    // Every style has its own dedicated geometric architecture, photo enhancement shader,
+    // and distinct festive ornaments rendered crisply at 1200x1600.
     return NextResponse.json({
       success: true,
       mode: "demo",
       provider: "studio-compositor",
       styleId,
-      message: "Studio Demo Mode: High-fidelity procedural festive compositor active. Add GEMINI_API_KEY, HUGGINGFACE_API_KEY, or OPENAI_API_KEY to enable cloud AI models.",
+      message: `Studio Compositor: Unique ${style.name} composition with tailored photo enhancement active.`,
     });
   } catch (error: unknown) {
     const errMessage = error instanceof Error ? error.message : "Internal generation error";
