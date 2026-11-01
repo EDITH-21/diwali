@@ -39,7 +39,7 @@ export function PrivacySection() {
             Your Privacy & Trust are Sacred
           </h2>
           <p className="text-amber-100/75 text-sm sm:text-base leading-relaxed">
-            Diwali is a celebration of family, sacred joy, and goodwill. Aadrut respects your personal photographs with bank-grade privacy principles and zero invasive data collection.
+            Diwali is a celebration of family, sacred joy, and goodwill. Shivam respects your personal photographs with bank-grade privacy principles and zero invasive data collection.
           </p>
         </div>
 
@@ -69,7 +69,7 @@ export function PrivacySection() {
 
         <div className="mt-8 pt-6 border-t border-amber-500/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-amber-300/60">
           <span>Compliant with modern privacy principles & zero permanent photo retention.</span>
-          <span className="font-semibold text-amber-400">Architected with care by Aadrut</span>
+          <span className="font-semibold text-amber-400">Architected with care by Shivam</span>
         </div>
       </div>
     </section>

@@ -270,7 +270,7 @@ export function StyleSelector({
                 familyOrOrgName: e.target.value,
               })
             }
-            placeholder="e.g. Aadrut Technologies, The Sharma Residence, or Studio Labs"
+            placeholder="e.g. Shivam & Family, The Sharma Residence, or Studio Labs"
             maxLength={50}
             className="w-full px-4 py-3 rounded-xl bg-stone-900/80 border border-amber-500/30 text-amber-100 placeholder:text-stone-500 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400/50 text-sm"
           />

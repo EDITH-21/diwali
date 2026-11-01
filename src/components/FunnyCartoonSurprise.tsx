@@ -87,7 +87,7 @@ export function FunnyCartoonSurprise({
   };
 
   const shareTheLaugh = async () => {
-    const punchline = `😂 "YOUR DIWALI IS OFFICIALLY FULL POWER!" — Even the fireworks couldn't handle ${personName}'s style!\n\n✨ Celebrate with AI Diwali Studio presented by Aadrut!`;
+    const punchline = `😂 "YOUR DIWALI IS OFFICIALLY FULL POWER!" — Even the fireworks couldn't handle ${personName}'s style!\n\n✨ Celebrate with AI Diwali Studio presented by Shivam!`;
 
     if (navigator.share) {
       try {

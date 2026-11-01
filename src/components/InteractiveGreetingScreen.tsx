@@ -165,7 +165,7 @@ export function InteractiveGreetingScreen({
   };
 
   const shareGreeting = async () => {
-    const shareText = `🪔 Wishing You and Your Family a Very Happy Diwali! 🪔\n\n— With warm regards from ${poster.personName}\n\n✨ Celebrate with AI Diwali Studio presented by Aadrut!`;
+    const shareText = `🪔 Wishing You and Your Family a Very Happy Diwali! 🪔\n\n— With warm regards from ${poster.personName}\n\n✨ Celebrate with AI Diwali Studio presented by Shivam!`;
 
     if (navigator.share) {
       try {
@@ -188,7 +188,7 @@ export function InteractiveGreetingScreen({
   const downloadGreeting = () => {
     const link = document.createElement("a");
     link.href = poster.imageUrl;
-    link.download = `Aadrut_Happy_Diwali_Greeting_${poster.personName.replace(/\s+/g, "_")}.jpg`;
+    link.download = `Shivam_Happy_Diwali_Greeting_${poster.personName.replace(/\s+/g, "_")}.jpg`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -356,7 +356,7 @@ export function InteractiveGreetingScreen({
 
       {/* Footer Branding */}
       <div className="relative z-10 text-center text-xs text-amber-300/50 pt-4">
-        AI DIWALI STUDIO • PRESENTED BY AADRUT
+        AI DIWALI STUDIO • PRESENTED BY SHIVAM
       </div>
     </div>
   );

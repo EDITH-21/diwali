@@ -52,7 +52,7 @@ export function GenerationProgress({
         {/* Status Heading */}
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/30 text-amber-300 text-xs font-bold uppercase tracking-wider mb-3">
           <Sparkles className="w-3.5 h-3.5 animate-spin" style={{ animationDuration: "3s" }} />
-          <span>Aadrut AI Engine In Action</span>
+          <span>Shivam AI Engine In Action</span>
         </div>
 
         <h3 className="text-2xl sm:text-3xl font-extrabold gold-gradient-text font-serif mb-2">

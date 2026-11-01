@@ -24,7 +24,7 @@ export function HeroSection({ onStartClick, onExploreClick }: HeroSectionProps) 
       <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-amber-500/30 bg-gradient-to-r from-amber-950/40 via-red-950/30 to-amber-950/40 backdrop-blur-md mb-6 shadow-[0_0_20px_rgba(255,215,0,0.1)]">
         <Sparkles className="w-4 h-4 text-amber-400 animate-spin" style={{ animationDuration: "8s" }} />
         <span className="text-xs sm:text-sm font-medium tracking-wide text-amber-200">
-          Presented by <span className="font-bold text-amber-300">Aadrut</span> • Your Photo. Your Festive Story.
+          Presented by <span className="font-bold text-amber-300">Shivam</span> • Your Photo. Your Festive Story.
         </span>
       </div>
 

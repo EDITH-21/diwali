@@ -43,7 +43,7 @@ export function PosterGallery({
     const link = document.createElement("a");
     link.href = poster.imageUrl;
     const cleanName = (poster.personName || "Diwali").replace(/\s+/g, "_");
-    link.download = `Aadrut_AI_Diwali_${poster.styleId}_${cleanName}.jpg`;
+    link.download = `Shivam_AI_Diwali_${poster.styleId}_${cleanName}.jpg`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -64,7 +64,7 @@ export function PosterGallery({
       const url = URL.createObjectURL(zipBlob);
       const link = document.createElement("a");
       link.href = url;
-      link.download = `Aadrut_Diwali_Studio_Posters_${Date.now()}.zip`;
+      link.download = `Shivam_Diwali_Studio_Posters_${Date.now()}.zip`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -83,7 +83,7 @@ export function PosterGallery({
   // Share on WhatsApp
   const shareOnWhatsApp = (poster: GeneratedPoster) => {
     const text = encodeURIComponent(
-      `🪔 *Happy Diwali from ${poster.personName}!* 🪔\n\n"${poster.customMessage}"\n\n✨ Created with *AI Diwali Studio* presented by Aadrut. Create your personalized Diwali collection now!`
+      `🪔 *Happy Diwali from ${poster.personName}!* 🪔\n\n"${poster.customMessage}"\n\n✨ Created with *AI Diwali Studio* presented by Shivam. Create your personalized Diwali collection now!`
     );
     window.open(`https://api.whatsapp.com/send?text=${text}`, "_blank");
   };
@@ -94,7 +94,7 @@ export function PosterGallery({
       try {
         await navigator.share({
           title: `Happy Diwali from ${poster.personName}`,
-          text: `"${poster.customMessage}" — Created with AI Diwali Studio presented by Aadrut`,
+          text: `"${poster.customMessage}" — Created with AI Diwali Studio presented by Shivam`,
           url: window.location.href,
         });
         return;
@@ -104,7 +104,7 @@ export function PosterGallery({
     }
 
     navigator.clipboard.writeText(
-      `🪔 Happy Diwali from ${poster.personName}! "${poster.customMessage}" — Created with AI Diwali Studio presented by Aadrut.`
+      `🪔 Happy Diwali from ${poster.personName}! "${poster.customMessage}" — Created with AI Diwali Studio presented by Shivam.`
     );
     setCopiedId(poster.id);
     setTimeout(() => setCopiedId(null), 2500);

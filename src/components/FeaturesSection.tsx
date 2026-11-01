@@ -52,7 +52,7 @@ export function FeaturesSection() {
           Built For Premium Festivities
         </h2>
         <p className="text-amber-100/70 text-base sm:text-lg">
-          Every detail engineered by Aadrut to deliver an unforgettable creative experience for you and your family.
+          Every detail engineered by Shivam to deliver an unforgettable creative experience for you and your family.
         </p>
       </div>
 

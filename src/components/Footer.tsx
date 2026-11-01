@@ -19,7 +19,7 @@ export function Footer() {
                 <Flame className="w-4 h-4 text-amber-400" />
               </div>
               <span className="text-xs uppercase tracking-[0.25em] text-amber-300 font-bold">
-                Aadrut Presents
+                Shivam Presents
               </span>
             </div>
 
@@ -48,7 +48,7 @@ export function Footer() {
               Creative Technology By
             </span>
             <div className="text-xl font-bold text-amber-100 font-serif">
-              AADRUT
+              SHIVAM
             </div>
             <p className="text-xs text-amber-200/60 max-w-xs mt-1">
               Pioneering elegant artificial intelligence, spatial design, and festive digital artistry.
@@ -58,7 +58,7 @@ export function Footer() {
 
         {/* Bottom copyright row */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-amber-300/60">
-          <p>© {new Date().getFullYear()} Aadrut presents AI Diwali Studio. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Shivam presents AI Diwali Studio. All rights reserved.</p>
 
           <div className="flex items-center gap-1 text-amber-400/80">
             <span>Made with</span>

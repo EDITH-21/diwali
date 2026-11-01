@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "AI Diwali Studio — Presented by Aadrut | Your Photo. Your Festive Story.",
-  description: "Transform your photograph into 5–8 stunning personalized AI Diwali posters and experience an interactive Diwali greeting with festive surprises. Powered by Aadrut.",
-  keywords: ["AI Diwali Studio", "Aadrut", "Diwali Posters", "Personalized Diwali Greetings", "Festive AI Art", "Happy Diwali 2026"],
-  authors: [{ name: "Aadrut" }],
+  title: "AI Diwali Studio — Presented by Shivam | Your Photo. Your Festive Story.",
+  description: "Transform your photograph into 5–8 stunning personalized AI Diwali posters and experience an interactive Diwali greeting with festive surprises. Powered by Shivam.",
+  keywords: ["AI Diwali Studio", "Shivam", "Diwali Posters", "Personalized Diwali Greetings", "Festive AI Art", "Happy Diwali 2026"],
+  authors: [{ name: "Shivam" }],
   openGraph: {
-    title: "AI Diwali Studio — Presented by Aadrut",
+    title: "AI Diwali Studio — Presented by Shivam",
     description: "Make this Diwali unforgettable. Turn your photograph into stunning personalized festive memories with AI.",
     siteName: "AI Diwali Studio",
     locale: "en_US",

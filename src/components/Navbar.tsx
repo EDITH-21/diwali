@@ -39,7 +39,7 @@ export function Navbar({ onStartClick, onExploreClick }: NavbarProps) {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Brand identity: Aadrut presents AI Diwali Studio */}
+        {/* Brand identity: Shivam presents AI Diwali Studio */}
         <div className="flex items-center gap-3">
           <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-[#ffd700]/20 to-[#b8860b]/10 border border-[#ffd700]/30 shadow-[0_0_15px_rgba(255,215,0,0.2)]">
             <Flame className="w-5 h-5 text-amber-400 drop-shadow-[0_0_8px_rgba(255,200,0,0.8)] animate-pulse" />
@@ -47,7 +47,7 @@ export function Navbar({ onStartClick, onExploreClick }: NavbarProps) {
           <div>
             <div className="flex items-center gap-2">
               <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-amber-400/80">
-                Aadrut Presents
+                Shivam Presents
               </span>
               <span className="inline-block w-1 h-1 rounded-full bg-amber-400/60" />
               <span className="text-[10px] tracking-wider text-amber-200/60 uppercase font-medium">

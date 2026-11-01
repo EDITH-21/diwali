@@ -1307,7 +1307,7 @@ export async function composeFestivePoster(options: ComposeOptions): Promise<str
   ctx.font = "500 16px system-ui, sans-serif";
   ctx.fillStyle = "rgba(245, 192, 66, 0.65)";
   ctx.letterSpacing = "2px";
-  ctx.fillText("AI DIWALI STUDIO  •  PRESENTED BY AADRUT", width / 2, height - 24);
+  ctx.fillText("AI DIWALI STUDIO  •  PRESENTED BY SHIVAM", width / 2, height - 24);
   ctx.restore();
 
   return canvas.toDataURL("image/jpeg", 0.94);

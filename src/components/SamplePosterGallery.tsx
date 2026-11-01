@@ -110,7 +110,7 @@ export function SamplePosterGallery({ onSelectStyle }: SamplePosterGalleryProps)
                   "May divine light fill your life with boundless happiness!"
                 </span>
                 <span className="text-[9px] text-amber-400/60 uppercase tracking-widest block mt-2 font-mono">
-                  Aadrut AI Studio
+                  Shivam AI Studio
                 </span>
               </div>
             </div>

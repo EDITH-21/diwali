@@ -78,7 +78,7 @@ export function HowItWorks() {
               </div>
 
               <div className="mt-8 pt-4 border-t border-amber-500/15 flex items-center gap-2 text-xs text-amber-400/80 font-medium">
-                <span>✦ Aadrut Quality Guaranteed</span>
+                <span>✦ Shivam Quality Guaranteed</span>
               </div>
             </div>
           );

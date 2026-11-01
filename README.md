@@ -1,4 +1,4 @@
-# AI Diwali Studio — Presented by Aadrut
+# AI Diwali Studio — Presented by Shivam
 > **"Your Photo. Your Festive Story."**
 
 A festive, production-ready web application developed with **Next.js**, **React 19**, **TypeScript**, and **Tailwind CSS**. It allows users to upload a portrait photograph and transform it into 5–8 personalized, high-definition AI Diwali posters, followed by an interactive full-screen Diwali greeting and a hilarious surprise cartoon finale.
@@ -74,5 +74,5 @@ OPENAI_API_KEY=your_key_here
 
 ## 📜 Brand Credit
 
-Presented by **Aadrut**.  
+Presented by **Shivam**.  
 Crafting elegant artificial intelligence, spatial computing, and digital festive artistry.
